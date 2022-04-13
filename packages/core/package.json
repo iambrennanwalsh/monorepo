@@ -1,0 +1,23 @@
+{
+	"name": "@nectarize/core",
+	"version": "0.0.1",
+	"description": "Nectarize",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iambrennanwalsh/nectar-ui.git",
+		"directory": "packages/core"
+	},
+	"type": "module",
+	"main": "src/index.ts",
+	"publishConfig": {
+		"access": "public",
+		"main": "dist/index.js",
+		"types": "types/index.d.ts"
+	},
+	"files": [
+		"dist",
+		"types"
+	]
+}

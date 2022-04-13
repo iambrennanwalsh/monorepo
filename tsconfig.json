@@ -1,0 +1,8 @@
+{
+	"extends": "./tsconfig.base.json",
+	"include": ["esbuild.config.ts"],
+	"references": [{ "path": "./docs" }, { "path": "./packages/core" }],
+	"ts-node": {
+		"esm": true
+	}
+}
