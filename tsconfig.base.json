@@ -3,6 +3,7 @@
 		"composite": true,
 		"declaration": true,
 		"esModuleInterop": true,
+		"jsx": "react-jsx",
 		"lib": ["esnext", "dom"],
 		"module": "esnext",
 		"moduleResolution": "node",

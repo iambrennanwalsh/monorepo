@@ -7,12 +7,11 @@ node_modules
 .next
 var
 dist
-types
-!**/src/types
 
 # local env files
 .env.local
 .env.*.local
 
 # typescript
+types
 *.tsbuildinfo

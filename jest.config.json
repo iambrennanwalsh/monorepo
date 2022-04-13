@@ -1,7 +1,7 @@
 {
-	"cacheDirectory": "<rootDir>/var/cache",
+	"cacheDirectory": "<rootDir>/var/jest/cache",
 	"collectCoverage": true,
-	"coverageDirectory": "<rootDir>/var/coverage",
+	"coverageDirectory": "<rootDir>/var/jest/coverage",
 	"coverageReporters": ["html"],
 	"extensionsToTreatAsEsm": [".ts"],
 	"globals": {

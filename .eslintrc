@@ -3,17 +3,26 @@
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": "latest",
+		"ecmaFeatures": {
+			"jsx": true
+		},
 		"sourceType": "module"
 	},
 	"extends": [
 		"eslint:recommended",
 		"plugin:import/recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react-hooks/recommended",
+		"plugin:jsx-a11y/recommended",
 		"plugin:jest/recommended",
+		"plugin:testing-library/react",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
 		"prettier"
 	],
 	"rules": {
+		"react/prop-types": 0,
 		"@typescript-eslint/no-explicit-any": 0,
 		"import/no-unresolved": 0,
 		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
@@ -24,6 +33,9 @@
 		"jest/globals": true
 	},
 	"settings": {
+		"react": {
+			"version": "detect"
+		},
 		"jest": {
 			"version": 27
 		}
