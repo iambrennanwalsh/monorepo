@@ -1,6 +1,7 @@
-const withTM = require('next-transpile-modules')(['@nectarize/core'])
+import transpileModules from 'next-transpile-modules'
 
-/** @type {import('next').NextConfig} */
+const withTM = transpileModules(['@iambrennanwalsh/core'])
+
 const nextConfig = {
 	pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
 	webpack: (config, options) => {
@@ -18,4 +19,4 @@ const nextConfig = {
 	}
 }
 
-module.exports = withTM(nextConfig)
+export default withTM(nextConfig)

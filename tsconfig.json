@@ -1,6 +1,6 @@
 {
 	"extends": "./tsconfig.base.json",
-	"include": ["vite.config.ts"],
+	"include": ["*.ts"],
 	"references": [{ "path": "./docs" }, { "path": "./packages/core" }],
 	"ts-node": {
 		"esm": true

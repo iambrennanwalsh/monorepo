@@ -1,1 +1,3 @@
-console.log("Hello World")
+import { hello } from './test.js'
+
+console.log(hello)

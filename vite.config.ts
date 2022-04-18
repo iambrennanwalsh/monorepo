@@ -1,7 +1,7 @@
 import { createRequire } from 'module'
 import path from 'path'
 import { type UserConfigExport } from 'vite'
-import dts from 'vite-dts'
+import dts from 'vite-plugin-dts'
 
 export default function getBaseViteConfig(
 	dirname: string,
@@ -18,17 +18,20 @@ export default function getBaseViteConfig(
 			jsxInject: "import React from 'react'"
 		},
 		build: {
-			emptyOutDir: true,
 			lib: {
-				entry: packageJSON.main,
+				entry: packageJSON.exports,
 				formats: ['es']
 			},
-			outDir: packageJSON.publishConfig.main,
+			outDir: 'dist',
 			rollupOptions: {
 				external: isExternal
 			}
 		},
-		plugins: [dts()],
+		plugins: [
+			dts({
+				outputDir: 'types'
+			})
+		],
 		...override
 	}
 }

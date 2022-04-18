@@ -3,7 +3,7 @@
 	"collectCoverage": true,
 	"coverageDirectory": "<rootDir>/var/jest/coverage",
 	"coverageReporters": ["html"],
-	"extensionsToTreatAsEsm": [".ts"],
+	"extensionsToTreatAsEsm": [".ts", ".tsx"],
 	"globals": {
 		"ts-jest": {
 			"useESM": true
