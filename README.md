@@ -7,8 +7,8 @@ A pure esm monorepo template.
 ## Features
 
 - Pure ESM.
-- Package management via Pnpm.
 - TypeScript (with project references).
+- Package management via Pnpm.
 - Testing via Jest (with snapshot testing).
 - Linting via ESLint
 - Formatting via Prettier.

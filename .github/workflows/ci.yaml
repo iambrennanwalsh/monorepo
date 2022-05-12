@@ -11,27 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
         with:
-          fetch-depth: 0
+          version: 7.1.0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version-file: '.nvmrc'
+          cache: pnpm
 
-      - name: Cache pnpm modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.1
-        with:
-          run_install: true
+      - run: pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
